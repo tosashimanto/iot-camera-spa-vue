@@ -49,7 +49,7 @@ module.exports = {
   ** Axios module configuration
   */
   axios: {
-    baseURL: 'http://localhost:8080/iot_camera/v1/getImageList'
+    baseURL: 'http://localhost:8080/iot_camera/v1'
   },
 
   /*

@@ -79,3 +79,11 @@ dist
 
 # IDE
 .idea
+.editorconfig
+.gitignore
+README.md
+_document/
+app/
+nuxt.config.js
+package.json
+yarn.lock

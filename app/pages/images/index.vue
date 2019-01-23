@@ -7,17 +7,20 @@
       <div>
         <el-table
           :data="showImages"
-          height="250"
-          style="width: 100%">
+          :default-sort = "{prop: 'ID', order: 'descending'}"
+          height="400"
+          style="width: 100%"
+          selectable
+          @row-click="handleClick">
           <el-table-column
             prop="ID"
             label="ID"
-            width="180">
+            sortable
+            width="80">
           </el-table-column>
           <el-table-column
             label="画像" :formatter="formatter"
             width="180">
-
           </el-table-column>
           <el-table-column
             prop="ExifLat"
@@ -38,9 +41,7 @@
           </el-table-column>
         </el-table>
       </div>
-      <!--<div>-->
-      <!--<el-button type="primary" @click="showImages">Test</el-button>-->
-      <!--</div>-->
+
       <el-row>
         <!--<el-button type="primary" @click="showImages2">Test</el-button>-->
         <el-button disabled>Default</el-button>
@@ -74,7 +75,6 @@
         })
       },
 
-
       ...mapGetters('images', ['images'])
     },
     methods: {
@@ -84,6 +84,9 @@
             src: "data:image/png;base64," + row.ImageData
           }
         })
+      },
+      handleClick(image) {
+        console.log("image=", image)
       },
 
     },

@@ -12,7 +12,7 @@
           <el-container>
             <el-main>
               <el-table
-                :data="data2()"
+                :data="getTabeldata()"
                 stripe
                 style="width: 100%">
                 <el-table-column
@@ -109,7 +109,7 @@
       // ...mapGetters(['user'])
     },
     methods: {
-      data2() {
+      getTabeldata() {
         var t ={
           tableData: [{
             date: '2016-05-03',

@@ -31,7 +31,8 @@
                 </el-table-column>
               </el-table>
               <div class="text-right">
-                <el-button type="primary" @click="handleClickSubmit">Test</el-button>
+                <el-button type="primary" @click="handleClickImages">Test</el-button>
+                <el-button type="primary" @click="handleClickD3map">D3 map</el-button>
               </div>
             </el-main>
           </el-container>
@@ -135,8 +136,13 @@
         })
       },
       // 画像List
-      async handleClickSubmit() {
+      async handleClickImages() {
         this.$router.push('/images/')
+      },
+
+      // 画像List
+      async handleClickD3map() {
+        this.$router.push('/d3_map/')
       },
 
       handleNodeClick(data) {

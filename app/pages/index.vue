@@ -99,6 +99,7 @@
     async asyncData({store, route}) {
 
       await store.dispatch('images/getImageList')
+      await store.dispatch('d3_map/getMapJSON')
 
     },
 
@@ -135,12 +136,12 @@
           return item
         })
       },
-      // 画像List
+      // 画像List遷移
       async handleClickImages() {
         this.$router.push('/images/')
       },
 
-      // 画像List
+      // D3 map遷移
       async handleClickD3map() {
         this.$router.push('/d3_map/')
       },

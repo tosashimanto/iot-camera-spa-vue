@@ -7,7 +7,7 @@
       <div>
         <el-table
           :data="showImages"
-          :default-sort = "{prop: 'ID', order: 'descending'}"
+          :default-sort="{prop: 'ID', order: 'descending'}"
           height="400"
           style="width: 100%"
           selectable
@@ -79,6 +79,7 @@
     },
     methods: {
       formatter(row, column) {
+        // Base64 decode
         return this.$createElement('img', {
           attrs: {
             src: "data:image/png;base64," + row.ImageData

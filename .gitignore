@@ -80,8 +80,6 @@ dist
 # IDE
 .idea
 .editorconfig
-.gitignore
-README.md
 _document/
 
 

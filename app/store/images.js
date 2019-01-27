@@ -43,6 +43,6 @@ export const actions = {
   },
 
   async getUsJson({commit}) {
-    const us_json = await this.$axios.$get(`http://localhost:8080/static/data/us.json`)
+    const us_json = await this.$axios.$get(`http://localhost:8080/static/data/us.topojson`)
   }
 }

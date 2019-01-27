@@ -88,6 +88,7 @@
       },
       handleClick(image) {
         console.log("image=", image)
+        this.$router.push('/maps/')
       },
 
     },

@@ -11,11 +11,11 @@ export const mutations = {}
 export const actions = {
 
 
-  async setLineGraph() {
+  async setLineGraph({commit}, d3_graph) {
 
     this.$axios.get('http://localhost:8080/d3_graph/line_graph_data.json')
       .then(function (response) {
-        drawLineGraph(response.data, "Test country");
+        drawLineGraph(d3_graph, response.data, "Test country");
       })
       .catch(function (error) {
         console.log(error);
@@ -25,11 +25,10 @@ export const actions = {
 
 }
 
-function drawLineGraph(data, country) {
-  var margin = {top: 20, right: 20, bottom: 30, left: 50},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
-
+function drawLineGraph(d3_graph, data, country) {
+  const margin = d3_graph.margin,
+     width = d3_graph.width,
+     height = d3_graph.height;
 
   // set the ranges
   const x = d3.scaleTime().range([0, width]);

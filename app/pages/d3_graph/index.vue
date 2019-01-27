@@ -39,8 +39,6 @@
     mounted() {
       const w = this.d3_graph.width - this.d3_graph.margin.left - this.d3_graph.margin.right
       const h = this.d3_graph.height - this.d3_graph.margin.top - this.d3_graph.margin.bottom
-      console.log("width=", w)
-      console.log("height=", h)
       this.d3_graph.width = w
       this.d3_graph.height = h
       this.setLineGraph(this.d3_graph)
@@ -54,7 +52,7 @@
 
 </script>
 
-<style> /* set the CSS */
+<style>
 
 .line {
   fill: none;

@@ -25,7 +25,7 @@ export const actions = {
 
 }
 
-function drawLineGraph(d3_graph, data, country) {
+function drawLineGraph(d3_graph, lineData, country) {
   const margin = d3_graph.margin,
      width = d3_graph.width,
      height = d3_graph.height;
@@ -51,10 +51,7 @@ function drawLineGraph(d3_graph, data, country) {
       return y(d.Exports);
     });
 
-  // append the svg obgect to the body of the page
-  // appends a 'group' element to 'svg'
-  // moves the 'group' element to the top left margin
-  const svg = d3.select("#graph-svg")
+  const svg = d3.select(d3_graph.id)
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
@@ -62,7 +59,7 @@ function drawLineGraph(d3_graph, data, country) {
       "translate(" + margin.left + "," + margin.top + ")");
 
 
-  var data = data[country];
+  var data = lineData[country];
 
   // parse the date / time
   const parseTime = d3.timeParse("%Y");

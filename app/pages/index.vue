@@ -33,6 +33,7 @@
               <div class="text-right">
                 <el-button type="primary" @click="handleClickImages">Test</el-button>
                 <el-button type="primary" @click="handleClickD3map">D3 map</el-button>
+                <el-button type="primary" @click="handleClickD3graph">D3 graph</el-button>
               </div>
             </el-main>
           </el-container>
@@ -47,7 +48,7 @@
 
 <script>
   import Logo from '~/components/Logo.vue'
-  import {mapActions, mapGetters} from 'vuex'
+  import {mapActions} from 'vuex'
 
   export default {
     data() {
@@ -148,7 +149,12 @@
 
       handleNodeClick(data) {
         console.log(data);
-      }
+      },
+
+      handleClickD3graph() {
+        console.log("handleClickD3graph");
+        this.$router.push('/d3_graph/')
+      },
     },
   }
 </script>

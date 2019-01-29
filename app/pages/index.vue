@@ -35,6 +35,7 @@
                 <el-button type="primary" @click="handleClickD3map">D3 map</el-button>
                 <el-button type="primary" @click="handleClickD3graph">D3 graph</el-button>
                 <el-button type="primary" @click="handleClickwebSocket">WebSocket</el-button>
+                <el-button type="primary" @click="handleClickUpload">upload</el-button>
               </div>
             </el-main>
           </el-container>
@@ -114,7 +115,7 @@
     },
     methods: {
       getTabeldata() {
-        var t ={
+        var t = {
           tableData: [{
             date: '2016-05-03',
             name: 'Tom',
@@ -160,6 +161,10 @@
       handleClickwebSocket() {
         console.log("handleClickwebSocket");
         this.$router.push('/websocket/')
+      },
+      handleClickUpload() {
+        console.log("handleClickUpload");
+        this.$router.push('/file-upload/')
       },
     },
   }

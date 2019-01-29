@@ -18,7 +18,8 @@
     "lodash.clonedeep": "^4.5.0",
     "moment": "^2.23.0",
     "nuxt": "^2.0.0",
-    "topojson": "^3.0.2"
+    "topojson": "^3.0.2",
+    "websocket": "^1.0.28"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"

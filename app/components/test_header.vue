@@ -1,7 +1,7 @@
 <template>
   <el-menu mode="horizontal" :router="true">
     <el-menu-item index="1" style="pointer-events:none;">
-      Nuxt test App
+      Nuxt Test App
     </el-menu-item>
     <el-menu-item index="2" :route="{ path: '/posts/' }">
       一覧
@@ -25,8 +25,8 @@
   import { mapGetters } from 'vuex'
 
   export default {
-    // computed: {
-    //   ...mapGetters(['user'])
-    // }
+    computed: {
+
+    }
   }
 </script>

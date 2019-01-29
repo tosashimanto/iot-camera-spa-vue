@@ -34,6 +34,7 @@
                 <el-button type="primary" @click="handleClickImages">Test</el-button>
                 <el-button type="primary" @click="handleClickD3map">D3 map</el-button>
                 <el-button type="primary" @click="handleClickD3graph">D3 graph</el-button>
+                <el-button type="primary" @click="handleClickwebSocket">WebSocket</el-button>
               </div>
             </el-main>
           </el-container>
@@ -154,6 +155,11 @@
       handleClickD3graph() {
         console.log("handleClickD3graph");
         this.$router.push('/d3_graph/')
+      },
+
+      handleClickwebSocket() {
+        console.log("handleClickwebSocket");
+        this.$router.push('/websocket/')
       },
     },
   }

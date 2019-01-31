@@ -2,13 +2,13 @@
   <section class="container posts-page">
     <el-card style="flex: 1">
       <el-tabs type="card" @tab-click="handleClick">
-        <el-tab-pane label="User">
+        <el-tab-pane label="日本地図">
           <div>
             <svg id="circle-001" :width="width" :height="height"></svg>
             <div>r: {{ r }}</div>
           </div>
         </el-tab-pane>
-        <el-tab-pane label="Config">Config</el-tab-pane>
+        <el-tab-pane label="世界地図"><WorldMap /></el-tab-pane>
         <el-tab-pane label="Role">Role</el-tab-pane>
         <el-tab-pane label="Task">Task</el-tab-pane>
       </el-tabs>
@@ -19,11 +19,13 @@
 <script>
   import {mapActions, mapGetters, mapMutations, mapState} from 'vuex';
   import cloneDeep from 'lodash.clonedeep'
+  import WorldMap from '~/components/map/WorldMap.vue'
   const d3 = require('d3');
   const topojson = require('topojson')
 
 
   export default {
+
     data() {
       return {
         activeName: 'first',
@@ -38,6 +40,10 @@
           scale : 1600
         }
       }
+    },
+
+    components: {
+      WorldMap
     },
 
     mounted() {

@@ -13,7 +13,7 @@
 #### グラフ描画、GeoJSON/TopoJSONによる地図描画
 
 
-![image](_documents/images/Vue ＋ D3.png)
+![image](_documents/images/Vue_D3.png)
 
 ### Build Setup
 

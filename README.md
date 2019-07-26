@@ -1,8 +1,21 @@
-# iot-camera-spa-vue
 
-> My exquisite Nuxt.js project
 
-## Build Setup
+## iot-camera-spa-vue
+
+> IoT Camera Nuxt.js project
+
+## 構成
+
+![image](_documents/images/IoTCamera_summary.png)
+
+### Vue.js + D3.js
+
+#### グラフ描画、GeoJSON/TopoJSONによる地図描画
+
+
+![image](_documents/images/Vue ＋ D3.png)
+
+### Build Setup
 
 ``` bash
 # install dependencies
